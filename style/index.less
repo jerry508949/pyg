@@ -1,0 +1,89 @@
+@import 'reset.less';
+
+.layout  {
+    width: 100vw;
+    height: 100vh;
+    max-width: 640px;
+    background-color: #eee;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.sn_header {
+    height: 45px;
+    padding: 5px; 
+    position: fixed;
+}
+
+.sn_main {
+    flex: 1;
+    .tpl-wrapper {   
+        padding: 18px;
+        background-color: #fff;
+        .sn_navigator {
+            width: 100%;
+            >div {
+                cursor: pointer;
+            }
+        }
+    }
+    .sn_content {
+        width: 100%;
+        padding: 0 10px;
+        .sn_itemList {
+            width: 100%;
+            .sn_item {
+                .sn_title {
+                    margin: 5px 0px;
+                    img {
+                        width: 100%;
+                        display: block;
+                    }
+                }
+                .pro_list {
+                    display: flex;
+                    flex-wrap: wrap;
+                    .sn_pro {
+                        width: 49%;
+                        margin-bottom: 5px;
+                        background-color: #fff;
+                        padding: 5px;
+                        &:nth-of-type(2n) {
+                            margin-left: 2%;
+                        }
+                        img {
+                            width: 100%;
+                            display: block;
+                        }
+                        .pro_price {
+                            color: red
+                        }
+                        .mui-btn {
+                            display: block;
+                            margin: 0 auto;
+                            padding: 0 15px;
+                        }
+                        .pro_desc {
+                            font-size: 12px;
+                            color: #333;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}   
+
+.sn_footer {
+    height: 45px;
+    .mui-bar-tab {
+        >a:nth-of-type(3) {
+            >span:nth-of-type(2) {
+                display: block;
+                font-size: 12px;
+                margin-bottom: -5px;
+            }
+        }
+    }
+}

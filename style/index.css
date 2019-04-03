@@ -1,0 +1,171 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+ol,
+ul {
+  list-style: none;
+}
+.layout {
+  width: 100vw;
+  height: 100vh;
+  max-width: 640px;
+  background-color: #eee;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+.sn_header {
+  height: 45px;
+  padding: 5px;
+  position: fixed;
+}
+.sn_main {
+  flex: 1;
+}
+.sn_main .tpl-wrapper {
+  padding: 18px;
+  background-color: #fff;
+}
+.sn_main .tpl-wrapper .sn_navigator {
+  width: 100%;
+}
+.sn_main .tpl-wrapper .sn_navigator > div {
+  cursor: pointer;
+}
+.sn_main .sn_content {
+  width: 100%;
+  padding: 0 10px;
+}
+.sn_main .sn_content .sn_itemList {
+  width: 100%;
+}
+.sn_main .sn_content .sn_itemList .sn_item .sn_title {
+  margin: 5px 0px;
+}
+.sn_main .sn_content .sn_itemList .sn_item .sn_title img {
+  width: 100%;
+  display: block;
+}
+.sn_main .sn_content .sn_itemList .sn_item .pro_list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.sn_main .sn_content .sn_itemList .sn_item .pro_list .sn_pro {
+  width: 49%;
+  margin-bottom: 5px;
+  background-color: #fff;
+  padding: 5px;
+}
+.sn_main .sn_content .sn_itemList .sn_item .pro_list .sn_pro:nth-of-type(2n) {
+  margin-left: 2%;
+}
+.sn_main .sn_content .sn_itemList .sn_item .pro_list .sn_pro img {
+  width: 100%;
+  display: block;
+}
+.sn_main .sn_content .sn_itemList .sn_item .pro_list .sn_pro .pro_price {
+  color: red;
+}
+.sn_main .sn_content .sn_itemList .sn_item .pro_list .sn_pro .mui-btn {
+  display: block;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+.sn_main .sn_content .sn_itemList .sn_item .pro_list .sn_pro .pro_desc {
+  font-size: 12px;
+  color: #333;
+}
+.sn_footer {
+  height: 45px;
+}
+.sn_footer .mui-bar-tab > a:nth-of-type(3) > span:nth-of-type(2) {
+  display: block;
+  font-size: 12px;
+  margin-bottom: -5px;
+}
