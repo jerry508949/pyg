@@ -33,13 +33,10 @@
                     </div>
                 </div>
             </div>
-
-
-            
             <div class="sn_nav">
                 <div class="tpl-wrapper" data-tpl-id="m_h_v31icon_1" style="margin-top: 8px;">
                     <div view-name="DFrameLayout" class="sn_navigator"
-                        style="display: flex; overflow: hidden; height: 145.067px; width: 340px; position: relative;">
+                        style="display: flex; place-self: flex-start; overflow: hidden; height: 145.067px; width: 340px; position: relative;">
                         <div view-name="DLinearLayout" aria-label="天猫"
                             style="display: flex; overflow: hidden; width: 55.3067px; height: 60.7467px; margin-left: 9.06667px; margin-top: 11.7867px; -webkit-box-orient: vertical; flex-direction: column; top: 0px; left: 0px; position: absolute;">
                             <div view-name="HGifView"
@@ -174,20 +171,20 @@
         <!-- 尾部 -->
         <div class="sn_footer">
             <nav class="mui-bar mui-bar-tab">
-                <a class="mui-tab-item mui-active" href="javascript:;">
+                <a class="mui-tab-item mui-active" href="./index.html">
                     <span class="mui-icon mui-icon-home"></span>
                     <span class="mui-tab-label">首页</span>
                 </a>
-                <a class="mui-tab-item" href="javascript:;">
-                    <span class="mui-icon mui-icon-email"></span>
+                <a class="mui-tab-item" href="./views/category.html">
+                    <span class="mui-icon mui-icon-list"></span>
                     <span class="mui-tab-label">分类</span>
                 </a>
-                <a class="mui-tab-item" href="javascript:;">
-                    <span class="fa fa-shopping-cart"></span>
-                    <span class="mui-tab-label">购物车</span>
+                <a class="mui-tab-item" href="#tabbar-with-contact">
+                    <span class="mui-icon-extra mui-icon-extra-cart"></span>
+                    <div class="mui-tab-label" style='font-size: 12px'>购物车</div>
                 </a>
-                <a class="mui-tab-item" href="javascript:;">
-                    <span class="mui-icon mui-icon mui-icon-contact"></span>
+                <a class="mui-tab-item" href="#tabbar-with-map">
+                    <span class="mui-icon mui-icon-contact"></span>
                     <span class="mui-tab-label">我的</span>
                 </a>
             </nav>
@@ -227,8 +224,10 @@
      {{/each}}   
 </script>
 <script src="lib/mui/js/mui.min.js"></script>
+<script src="lib/iscroll/iscroll.js"></script>
 <script src="lib/zepto/zepto.js"></script>
 <script src="lib/arttemplate/template-web.js"></script>
+<script src="js/common.js"></script>
 <script src="js/index.js"></script>
 
 </html>

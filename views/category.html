@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../lib/mui/css/mui.min.css">
+    <link rel="stylesheet" href="../lib/fontawesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../style/category.css">
+</head>
+
+
+<body>
+    <div class="layout">
+        <!-- 头部 -->
+        <div class="sn_header">
+            <div class="mui-input-row mui-search">
+                <input type="search" class="mui-input-clear" placeholder="请输入商品名称">
+            </div>
+        </div>
+        <!-- 主体内容 -->
+        <div class="sn_main">
+            <div class="left">
+                <ul>
+
+                </ul>
+            </div>
+            <div class="right">
+                <div class="rightList">
+
+                </div>
+            </div>
+        </div>
+        <!-- 尾部 -->
+        <div class="sn_footer">
+            <nav class="mui-bar mui-bar-tab">
+                <a class="mui-tab-item mui-active" href="../index.html">
+                    <span class="mui-icon mui-icon-home"></span>
+                    <span class="mui-tab-label">首页</span>
+                </a>
+                <a class="mui-tab-item" href="./views/category.html">
+                    <span class="mui-icon mui-icon-email"></span>
+                    <span class="mui-tab-label">分类</span>
+                </a>
+                <a class="mui-tab-item" href="javascript:;">
+                    <span class="fa fa-shopping-cart"></span>
+                    <span class="mui-tab-label">购物车</span>
+                </a>
+                <a class="mui-tab-item" href="javascript:;">
+                    <span class="mui-icon mui-icon mui-icon-contact"></span>
+                    <span class="mui-tab-label">我的</span>
+                </a>
+            </nav>
+        </div>
+    </div>
+</body>
+
+<script type="text/template" id="leftListTemp">
+{{each list.data value index}}
+    <li class="{{index==0?'active':''}}">
+        <a href="#" data-id="{{value.cat_id}}">
+            {{value.cat_name}}
+        </a>
+    </li>
+{{/each}}
+</script>
+
+<script type="text/template" id="rightListTemp">
+{{each children value index}}
+    <div class="cate2">
+        <div class="cate2_title">{{value.cat_name}}</div>
+        <div class="cate2_content">
+            {{each value.children value index}}
+                <a href="goods_list.html?cid={{value.cat_id}}">
+                    <img src="http://157.122.54.189:9094{{value.cat_icon}}" alt="">
+                    <span>{{value.cat_name}}</span>
+                </a>
+            {{/each}}
+        </div>
+    </div>
+{{/each}}
+</script>
+
+<script src="../lib/mui/js/mui.min.js"></script>
+<script src="../lib/zepto/zepto.js"></script>
+<script src="../lib/arttemplate/template-web.js"></script>
+<script src="../lib/iscroll/iscroll.js"></script>
+<script src="../js/common.js"></script>
+<script src="../js/category.js"></script>
+</html>
