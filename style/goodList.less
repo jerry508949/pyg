@@ -1,0 +1,84 @@
+@import 'reset.less';
+@import 'common.less';
+
+
+#header {
+    background-color: #f0f;
+}
+
+#refreshContainer {
+    .goodsList {
+        >li {
+            margin-bottom: 10px;
+            background-color: #fff;
+
+            img {
+                width: 70%;
+            }
+
+            a {
+                display: flex;
+
+                div {
+                    width: 50%;
+                }
+
+                div:nth-of-type(1) {
+                    text-align: center;
+                }
+
+                div:nth-of-type(2) {
+                    font-size: 14px;
+                    display: flex;
+                    flex-direction: column;
+                    // justify-content: center;
+                    // align-items: center;
+                    padding: 20px;
+                    span {
+                        margin-top: 20px;
+                        width: 100%;
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+                        text-align: center;
+                        color:#333;
+                    }
+                    div {
+                        margin-top: 10px;
+                        color: #ff0000;
+                        
+                    }
+                }
+            }
+        }
+    }
+}
+
+    // 搜索框
+    .search_bar {
+        .searchBox {
+            height: 45px;
+            display: flex;
+            margin-bottom: 10px;
+            .query_txt {
+                height: 100%;
+                flex: 1;
+                text-indent: 1em;
+                border-radius: 5px;
+            }
+            .query_btn {
+                height: 100%;
+                width: 80px;
+                border-radius: 5px;
+            }
+        }
+
+        .searchList {
+            background-color: #fff;
+            a {
+                display: block;
+                color: #333;
+            }
+        }
+
+    }

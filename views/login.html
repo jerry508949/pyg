@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../lib/mui/css/mui.min.css">
+    <link rel="stylesheet" href="../lib/fontawesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../style/login.css">
+</head>
+
+<body>
+    <div class="layout">
+        <!-- 头部 -->
+        <header id="header" class="mui-bar mui-bar-nav sn_header">
+            <h1 class="mui-title">商品列表</h1>
+            <a class="mui-icon mui-icon-search mui-pull-right"></a>
+            <a href="category.html" class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+        </header> -->
+        <!-- 主体内容 -->
+        <div class="sn_main">
+            <form class="mui-input-group">
+                <div class="mui-input-row">
+                    <label>账号</label>
+                    <input type="text" placeholder="请输入账号" class="username" value="13112345678">
+                </div>
+                <div class="mui-input-row">
+                    <label>密码</label>
+                    <input value="123456" type="password" class="mui-input-clear password" placeholder="请输入密码" data-input-clear="5"><span
+                        class="mui-icon mui-icon-clear mui-hidden" ></input>
+                </div>
+
+                <div class="mui-input-row mui-plus-visible">
+                    <label>Input</label>
+                    <input type="text" class="mui-input-speech mui-input-clear" placeholder="语音输入" data-input-clear="6"
+                        data-input-speech="6"><span class="mui-icon mui-icon-clear mui-hidden"></span><span
+                        class="mui-icon mui-icon-speech"></span>
+                </div>
+                <div class="mui-button-row">
+                    <button type="button" class="mui-btn mui-btn-primary"
+                        onclick="return false;">确认</button>&nbsp;&nbsp;
+                    <button type="button" class="mui-btn mui-btn-danger" onclick="return false;">取消</button>
+                </div>
+            </form>
+        </div>
+        <!-- 尾部 -->
+        <div class="sn_footer">
+            <nav class="mui-bar mui-bar-tab">
+                <a class="mui-tab-item" href="../index.html">
+                    <span class="mui-icon mui-icon-home"></span>
+                    <span class="mui-tab-label">首页</span>
+                </a>
+                <a class="mui-tab-item mui-active" href="./views/category.html">
+                    <span class="mui-icon mui-icon-email"></span>
+                    <span class="mui-tab-label">分类</span>
+                </a>
+                <a class="mui-tab-item" href="javascript:;">
+                    <span class="fa fa-shopping-cart"></span>
+                    <span class="mui-tab-label">购物车</span>
+                </a>
+                <a class="mui-tab-item" href="javascript:;">
+                    <span class="mui-icon mui-icon mui-icon-contact"></span>
+                    <span class="mui-tab-label">我的</span>
+                </a>
+            </nav>
+        </div>
+    </div>
+</body>
+
+<script src="../lib/mui/js/mui.min.js"></script>
+<script src="../lib/zepto/zepto.js"></script>
+<script src="../lib/arttemplate/template-web.js"></script>
+<script src="../lib/iscroll/iscroll.js"></script>
+<script src="../js/common.js"></script>
+<script src="../js/login.js"></script>
+
+</html>

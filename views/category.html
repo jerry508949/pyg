@@ -36,11 +36,11 @@
         <!-- 尾部 -->
         <div class="sn_footer">
             <nav class="mui-bar mui-bar-tab">
-                <a class="mui-tab-item mui-active" href="../index.html">
+                <a class="mui-tab-item" href="../index.html">
                     <span class="mui-icon mui-icon-home"></span>
                     <span class="mui-tab-label">首页</span>
                 </a>
-                <a class="mui-tab-item" href="./views/category.html">
+                <a class="mui-tab-item  mui-active" href="./views/category.html">
                     <span class="mui-icon mui-icon-email"></span>
                     <span class="mui-tab-label">分类</span>
                 </a>
@@ -73,7 +73,7 @@
         <div class="cate2_title">{{value.cat_name}}</div>
         <div class="cate2_content">
             {{each value.children value index}}
-                <a href="goods_list.html?cid={{value.cat_id}}">
+                <a href="goodsList.html?cid={{value.cat_id}}">
                     <img src="http://157.122.54.189:9094{{value.cat_icon}}" alt="">
                     <span>{{value.cat_name}}</span>
                 </a>

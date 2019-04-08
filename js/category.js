@@ -57,7 +57,7 @@ $(function () {
     //封装渲染主体右侧二级分类函数
     function rightCateList(index) {
         var html = template('rightListTemp',cateData.list.data[index])
-        console.log(cateData.list.data[index]);
+        console.log(cateData.list);
         $('.rightList').html(html)
 
         var imgCount = ('.rightList img').length

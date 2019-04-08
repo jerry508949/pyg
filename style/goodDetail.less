@@ -1,0 +1,77 @@
+@import 'reset.less';
+@import 'common.less';
+
+.sn_footer {
+    a:nth-of-type(n+2) {
+        button {
+            height: 100%;
+            width: 100%;
+            margin-top: -13px;
+        }
+    }
+    a:nth-of-type(-n+2) {
+        color: #333333;
+    }
+}
+
+.sn_main {
+    .mui-scroll-wrapper {
+        top: 45px;
+        bottom: 50px;
+        .goodsName {
+            color: #333;
+            font-size: 14px;
+            padding: 8px 4px;
+        }
+        .goodsPrice {
+            color: #f20;
+            font-size: 18px;
+            padding: 0 8px;
+        }
+        .userInfo {
+            padding: 8px 4px;
+            li {
+                display: flex;
+                font-size: 14px;
+                color: #aaa;
+                padding: 10px 0;
+                border-bottom: 1px solid #aaa;
+                span:nth-of-type(1) {
+                    flex: 1;
+                }
+                span:nth-of-type(2) {
+                    color: #333;
+                    flex: 4;
+                }
+            }
+        }
+        .attr_title { 
+            padding: 8px;
+            font-size: 16px;
+            color: #aaa;
+            border-bottom: 1px solid #000;
+            
+        }
+        .attr_content {
+            padding: 8px;
+            display: flex;
+            font-size: 14px;
+            color: #aaa;
+            span:nth-of-type(1) {
+                flex: 1;
+            }
+            span:nth-of-type(2) {
+                flex: 4;
+            }
+        }
+    }
+    .sliderBox {
+        >div {
+            a {
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
