@@ -1,0 +1,28 @@
+@import 'reset.less';
+@import 'common.less';
+
+.sn_main{
+    position: relative;
+    top:45px;
+    bottom: 10px;
+    .orderDetails {
+        margin: 10px;
+        padding: 5px;
+        background-color: #fff;
+        li {
+            display: flex;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 5px;
+            >div:nth-of-type(1){
+                flex: 6;
+                div {
+                    margin-top: 5px;
+                }
+            }
+            >div:nth-of-type(2){
+                flex: 2;
+                color: #f00;    
+            }
+        }
+    }
+}

@@ -10,7 +10,13 @@
     <link rel="stylesheet" href="../lib/fontawesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="../style/login.css">
 </head>
-
+<style>
+    #getResgiter {
+        position: absolute;
+        right: 0px;
+        width: 100px;
+    }
+</style>
 <body>
     <div class="layout">
         <!-- 头部 -->
@@ -23,25 +29,40 @@
         <div class="sn_main">
             <form class="mui-input-group">
                 <div class="mui-input-row">
-                    <label>账号</label>
-                    <input type="text" placeholder="请输入账号" class="username" value="13112345678">
+                    <label>手机号：</label>
+                    <input name="mobile" type="text" class="mui-input-clear" placeholder="请输入手机号" value="13512345678">
                 </div>
                 <div class="mui-input-row">
-                    <label>密码</label>
-                    <input value="123456" type="password" class="mui-input-clear password" placeholder="请输入密码" data-input-clear="5"><span
-                        class="mui-icon mui-icon-clear mui-hidden" ></input>
+                    <label>验证码：</label>
+                    <input name="code" type="text" class="mui-input-clear" placeholder="请输入验证码">
+                    <button type="button" class="mui-btn mui-btn-royal " id="getResgiter">获取验证码</button> 
                 </div>
-
-                <div class="mui-input-row mui-plus-visible">
-                    <label>Input</label>
-                    <input type="text" class="mui-input-speech mui-input-clear" placeholder="语音输入" data-input-clear="6"
-                        data-input-speech="6"><span class="mui-icon mui-icon-clear mui-hidden"></span><span
-                        class="mui-icon mui-icon-speech"></span>
+                <div class="mui-input-row">
+                    <label>邮箱：</label>
+                    <input name="email" type="text" class="mui-input-clear" placeholder="请输入邮箱"
+                        value="13512345678@qq.com">
+                </div>
+                <div class="mui-input-row">
+                    <label>密码：</label>
+                    <input name="pwd" type="password" class="mui-input-clear mui-input-password"
+                        placeholder="请输入密码" value="13512345678">
+                </div>
+                <div class="mui-input-row">
+                    <label>确认密码：</label>
+                    <input name='againpassword' type="password" class="mui-input-clear mui-input-password" placeholder="请确认密码"
+                        value="13512345678">
+                </div>
+                <div class="mui-input-row mui-radio">
+                    <label>男</label>
+                    <input name="gender" type="radio" checked="" value="男">
+                </div>
+                <div class="mui-input-row mui-radio">
+                    <label>女</label>
+                    <input name="gender" type="radio" checked="" value="女">
                 </div>
                 <div class="mui-button-row">
-                    <button type="button" class="mui-btn mui-btn-primary"
-                        onclick="return false;">确认</button>&nbsp;&nbsp;
-                    <button type="button" class="mui-btn mui-btn-danger btn_resgiter" onclick="return false;">注册</button>
+                    <button type="button" class="mui-btn mui-btn-primary btn-register">注册</button>
+                    <button type="button" class="mui-btn mui-btn-danger">取消</button>
                 </div>
             </form>
         </div>
@@ -74,6 +95,6 @@
 <script src="../lib/arttemplate/template-web.js"></script>
 <script src="../lib/iscroll/iscroll.js"></script>
 <script src="../js/common.js"></script>
-<script src="../js/login.js"></script>
+<script src="../js/resgiter.js"></script>
 
 </html>

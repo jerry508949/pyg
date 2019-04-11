@@ -179,11 +179,11 @@
                     <span class="mui-icon mui-icon-list"></span>
                     <span class="mui-tab-label">分类</span>
                 </a>
-                <a class="mui-tab-item" href="#tabbar-with-contact">
+                <a class="mui-tab-item" href="./views/cart.html">
                     <span class="mui-icon-extra fa fa-shopping-cart"></span>
                     <div class="mui-tab-label" style='font-size: 12px'>购物车</div>
                 </a>
-                <a class="mui-tab-item" href="#tabbar-with-map">
+                <a class="mui-tab-item" href="./views/login.html">
                     <span class="mui-icon mui-icon-contact"></span>
                     <span class="mui-tab-label">我的</span>
                 </a>
@@ -213,8 +213,7 @@
         <div class="pro_list">
             {{each value.goods value index}}
             <div class="sn_pro">
-                <img src="{{value.goods_small_logo}}"
-                    alt="">
+                <a href="#"><img src="{{value.goods_small_logo}}" alt=""></a>
                 <div class="pro_desc mui-ellipsis-2">{{value.goods_name}}</div>
                 <div class="pro_price">￥{{value.goods_price}}</div>
                 <button type="button" class="mui-btn mui-btn-primary mui-btn-outlined">找相似</button>

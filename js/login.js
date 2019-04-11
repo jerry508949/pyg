@@ -36,12 +36,20 @@ $(function () {
                     if(redirectURL) {
                         location.href = unescape(redirectURL)
                     }else {
-                        location.href = './index.html'
+                        setTimeout(() => {
+                            location.href = '../index.html'
+                        }, 1000);
+                        mui.toast(result.meta.msg)
                     }
                 }else {
                     mui.toast(result.meta.msg)
                 }
             }
         })
+    })
+    $('.btn_resgiter').on('tap',function () {
+        location.href = './resgiter.html'
+        console.log(123);
+        
     })
 })

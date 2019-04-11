@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../lib/mui/css/mui.min.css">
+    <link rel="stylesheet" href="../lib/mui/css/mui.picker.css">
+    <link rel="stylesheet" href="../lib/mui/css/mui.poppicker.css">
+    <link rel="stylesheet" href="../lib/fontawesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../style/cart.css">
+</head>
+
+<body>
+    <div class="layout eleToggle">
+        <!-- 头部 -->
+        <header id="header" class="mui-bar mui-bar-nav sn_header">
+            <h1 class="mui-title">购物车</h1>
+            <button type="button" class="btn_edit mui-btn mui-btn-primary mui-btn-outlined mui-pull-right">
+                编辑
+            </button>
+            <button type="button" class="btn-del mui-btn mui-btn-primary mui-btn-outlined mui-pull-left">
+                删除
+            </button>
+        </header> 
+        <!-- 主体内容 -->
+        <div class="sn_main">
+            <div class="mui-scroll-wrapper">
+                <div class="mui-scroll">
+                    <div class="sn_address">
+                        <h5 class="transport">配送地址</h5>
+                        <div class="address_cont">
+                            <div class="left fa fa-map-marker"></div>
+                            <div class="right">
+                                <h5>默认地址</h5>
+                                <span>我在哪里</span>
+                            </div>
+                            <div class="selectAddress" style="font-size: 15px;line-height: 45px;color: pink;">选择配送地址</div>
+                        </div>
+                    </div>
+                    <div class="total_price">
+                        <div>总价</div>
+                        <div class="content">
+                            <div>总价:</div>
+                            <div class="orderPrice">￥ 18888</div>
+                            <div class="createOrder">生成订单</div>
+                        </div>
+                    </div>
+                    <div class="sn_orders">
+                        <h5>订单</h5>
+                        <ul class="orderList">
+                            
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 尾部 -->
+        <div class="sn_footer">
+            <nav class="mui-bar mui-bar-tab">
+                <a class="mui-tab-item" href="../index.html">
+                    <span class="mui-icon mui-icon-home"></span>
+                    <span class="mui-tab-label">首页</span>
+                </a>
+                <a class="mui-tab-item" href="category.html">
+                    <span class="mui-icon mui-icon-email"></span>
+                    <span class="mui-tab-label">分类</span>
+                </a>
+                <a class="mui-tab-item mui-active" href="cart.html">
+                    <span class="fa fa-shopping-cart"></span>
+                    <span class="mui-tab-label">购物车</span>
+                </a>
+                <a class="mui-tab-item" href="login.html">
+                    <span class="mui-icon mui-icon mui-icon-contact"></span>
+                    <span class="mui-tab-label">我的</span>
+                </a>
+            </nav>
+        </div>
+    </div>
+</body>
+<script type="text/template" id="orderListTemp">
+    {{each list value index}}
+    <li data-order="{{value}}">
+        <div class="checkedBox mui-input-row mui-checkbox mui-left">
+            <label></label>
+            <input class="checkedBox" name="checkbox" value="Item 2" type="checkbox">
+        </div>
+        <div class="pro_pic">
+            <img src="{{value.goods_small_logo}}" alt="">
+        </div>
+        <div class="pro_info">
+            <p class="mui-ellipsis-2">{{value.goods_name}}</p>
+            <div class="mui-numbox" data-numbox-min="1" data-numbox-max="100">
+                <button class="mui-btn mui-btn-numbox-minus" type="button">-</button>
+                <input id="test" class="mui-input-numbox" type="number" value="{{value.amount}}">
+                <button class="mui-btn mui-btn-numbox-plus" type="button">+</button>
+            </div>
+            <span>￥ {{value.goods_price}}</span>
+        </div>
+    </li>
+    {{/each}}
+</script>
+<script src="../lib/mui/js/mui.min.js"></script>
+<script src="../lib/mui/js/mui.picker.js"></script>
+<script src="../lib/mui/js/mui.poppicker.js"></script>
+<script src="../lib/zepto/zepto.js"></script>
+<script src="../lib/arttemplate/template-web.js"></script>
+<script src="../lib/iscroll/iscroll.js"></script>
+<script src="../js/common.js"></script>
+<script src="../data/citys.js"></script>
+<script src="../js/cart.js"></script>
+
+</html>

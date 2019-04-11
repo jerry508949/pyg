@@ -6,7 +6,7 @@ $(function () {
         window.top.location.href = this.href;
     });
 
-
+    
     //把url提取出来
     const baseURL = 'http://157.122.54.189:9094/api/public/v1/'
     // const baseURL = 'http://140.143.222.79:8899/api/public/v1/'
@@ -39,5 +39,10 @@ $(function () {
             }
             return obj
         }
+    })
+    //单击箭头原路返回href
+    $('.mui-action-back').on('tap',function(){
+        console.log(223)
+        history.back()
     })
 })

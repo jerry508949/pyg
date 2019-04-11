@@ -1,0 +1,247 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+ol,
+ul {
+  list-style: none;
+}
+.layout {
+  width: 100vw;
+  height: 100vh;
+  max-width: 640px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+.sn_header {
+  height: 45px;
+  background-color: #eee;
+  padding: 4px;
+}
+.sn_main {
+  flex: 1;
+  overflow: scroll;
+}
+.sn_footer {
+  height: 45px;
+}
+.loadding::before {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  opacity: .5;
+  content: "";
+  z-index: 100;
+}
+.loadding::after {
+  font: normal normal normal 14px/1 FontAwesome;
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  margin-left: -50px;
+  font-size: 100px;
+  color: #0094ff;
+  content: "\f013";
+  z-index: 101;
+  animation: fa-spin 1s infinite linear;
+}
+.sn_header .mui-btn {
+  top: 4px;
+}
+.sn_main .mui-scroll-wrapper {
+  top: 45px;
+  bottom: 45px;
+}
+.sn_main .mui-scroll-wrapper .sn_address {
+  padding: 10px;
+}
+.sn_main .mui-scroll-wrapper .sn_address .transport {
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 5px;
+}
+.sn_main .mui-scroll-wrapper .sn_address .address_cont {
+  background-color: #fff;
+  display: flex;
+  padding: 5px;
+}
+.sn_main .mui-scroll-wrapper .sn_address .address_cont div:nth-of-type(1) {
+  flex: 2;
+  text-align: center;
+  padding-top: 8px;
+  font-size: 28px;
+}
+.sn_main .mui-scroll-wrapper .sn_address .address_cont div:nth-of-type(2) {
+  flex: 12;
+}
+.sn_main .mui-scroll-wrapper .sn_address .address_cont div:nth-of-type(2) h5 {
+  font-size: 14px;
+  color: #333;
+}
+.sn_main .mui-scroll-wrapper .sn_address .address_cont div:nth-of-type(2) span {
+  color: #333;
+  font-size: 12px;
+}
+.sn_main .mui-scroll-wrapper .total_price {
+  padding: 10px;
+}
+.sn_main .mui-scroll-wrapper .total_price div:nth-of-type(1) {
+  font-size: 14px;
+  color: #333;
+}
+.sn_main .mui-scroll-wrapper .total_price .content {
+  background-color: #fff;
+  display: flex;
+  padding: 10px;
+}
+.sn_main .mui-scroll-wrapper .total_price .content div:nth-of-type(1) {
+  flex: 2;
+  text-align: center;
+  font-size: 15px;
+}
+.sn_main .mui-scroll-wrapper .total_price .content div:nth-of-type(2) {
+  flex: 12;
+  color: #ff0000;
+}
+.sn_main .mui-scroll-wrapper .total_price .content div:nth-of-type(3) {
+  color: #f0f;
+  font-size: 14px;
+}
+.sn_main .mui-scroll-wrapper .sn_orders {
+  padding: 10px;
+}
+.sn_main .mui-scroll-wrapper .sn_orders h5 {
+  font-size: 14px;
+  color: #333;
+}
+.sn_main .mui-scroll-wrapper .sn_orders .orderList li {
+  background-color: #fff;
+  padding: 10px;
+  display: flex;
+}
+.sn_main .mui-scroll-wrapper .sn_orders .orderList li .mui-checkbox {
+  flex: 2;
+  justify-content: center;
+}
+.sn_main .mui-scroll-wrapper .sn_orders .orderList li .mui-checkbox input {
+  margin-top: 25px;
+}
+.sn_main .mui-scroll-wrapper .sn_orders .orderList li .pro_pic {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.sn_main .mui-scroll-wrapper .sn_orders .orderList li .pro_pic img {
+  width: 90%;
+  display: inline-block;
+}
+.sn_main .mui-scroll-wrapper .sn_orders .orderList li .pro_info {
+  flex: 5;
+  display: flex;
+  flex-direction: column;
+  font-size: 12px;
+  line-height: 18px;
+}
+.sn_main .mui-scroll-wrapper .sn_orders .orderList li .pro_info p {
+  color: #333;
+}
+.sn_main .mui-scroll-wrapper .sn_orders .orderList li .pro_info div {
+  margin: 10px 0 ;
+}
+.sn_main .mui-scroll-wrapper .sn_orders .orderList li .pro_info span {
+  font-size: 18px;
+}
+.eleToggle .checkedBox,
+.eleToggle .btn-del {
+  display: none;
+}

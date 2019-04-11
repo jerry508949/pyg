@@ -26,21 +26,22 @@ $(function () {
 
 
             //获取商品请求参数
-            // info.cat_id = result.data.cat_id
-            // info.goods_id = result.data.goods_id
-            // info.goods_name = result.data.goods_name
-            // info.goods_number = result.data.goods_number
-            // info.goods_price = result.data.goods_price
-            // info.goods_small_logo = result.data.goods_small_logo
-            // info.goods_weight = result.data.goods_weight
-            info = result.data
-        
+            info.cat_id = result.data.cat_id
+            info.goods_id = result.data.goods_id
+            info.goods_name = result.data.goods_name
+            info.goods_number = result.data.goods_number
+            info.goods_price = result.data.goods_price
+            info.goods_small_logo = result.data.goods_small_logo
+            info.goods_weight = result.data.goods_weight
+            // info = result.data
+
             // console.log(result.data);
             var html = template('goodDetailTemp', result.data)
             // // console.log(html);
             // console.log("主体-参数".slice("主体-参数".lastIndexOf('-')*-1));
             // console.log("how are you today?".lastIndexOf('are'));
-
+            console.log(info);
+            
             $('.sn_main .mui-scroll').html(html)
             //实现自动轮播
             mui('.mui-slider').slider({
@@ -49,34 +50,40 @@ $(function () {
 
         }
     })
-    
+
     $('.btn_addCart').on('tap', function () {
         //判断token是否存在
         var myToken = sessionStorage.getItem('sn_token')
         //将当前url存放到本地中
-        sessionStorage.setItem('redirectUrl',location.href)
-        if(!myToken) {
+        sessionStorage.setItem('redirectUrl', location.href)
+        if (!myToken) {
             location.href = './login.html?redirectURL=' + escape(location.href)
-        }else {
+        } else {
             //如果存在则发送ajax
             $.ajax({
                 type: 'post',
-                url: 'my/cart/sync',
-                data: info,
+                url: 'my/cart/add',
+                data: {info:JSON.stringify(info)},
                 dataType: 'json',
                 success: function (result) {
                     console.log(result);
                     // 判断token是否无效或者过期
-                    if(result.meta.status == 401) {
+                    if (result.meta.status == 401) {
                         location.href = './login.html?redirectURL=' + escape(location.href)
-                    }else {
-                        console.log(result);
-                        
-                        console.log('ok');
+                    } else {
+                        // console.log(result);
+                        // console.log('ok')
+                        mui.confirm('是否加入购物车', '温馨提示', ['是', '否'], function (e) {
+                            if (e.index == 0) {
+                                location.href = './cart.html'
+                            } else {
+                                return;
+                            }
+                        })
                     }
                 }
             })
         }
-        
+
     })
 })

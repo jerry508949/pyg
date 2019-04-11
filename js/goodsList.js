@@ -5,6 +5,11 @@ $(function () {
 
     })
 
+    mui('body').on('tap', 'a', function (e) {
+        e.preventDefault()
+        window.top.location.href = this.href;
+    });
+
 
     //识别当前页面的cid
     function getCid(url) {
@@ -105,7 +110,5 @@ $(function () {
     $('.query_txt').on('focus',function () {
         $(this).val('')
     })
-    $('.mui-action-back').on('tap',function(){
-        history.back()
-    })
+    
 })
